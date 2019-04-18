@@ -1,0 +1,23 @@
+{% extends 'plantilla_base.html' %}
+
+{% block css %}
+<link rel="stylesheet" title="estilos" href="templates/Principal/style.css" />
+{% endblock %}
+
+{% block contenido %}
+
+      <main>
+        {% for evento in eventos %}
+        <article class="eventos">
+          <a href="eventos.php?event={{evento.titulo}}" class="enlace_eventos">
+            <span class="icono_mas">+</span>
+            <img src="templates/IMG/{{ evento.titulo }}.jpg" class="img_eventos">
+          </a>
+          <div class="titulo_evento">
+            <h3>{{ evento.titulo|upper }}</h3>
+          </div>
+        </article>
+        {% endfor %}
+      </main>
+
+{% endblock %}
