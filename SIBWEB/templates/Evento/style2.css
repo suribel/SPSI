@@ -1,0 +1,233 @@
+#full-coment{
+  background-color:#008B8B;
+  display:none;
+}
+textarea{
+  resize: none
+}
+.coment{
+  padding: 10px;
+}
+#formul{
+  margin-top: 20px;
+  display:none;
+}
+#coment-form {
+   height: 6em;
+   width: 150px;
+}
+#comentarios {
+  grid-area: coment;
+  background-color:#008B8B;
+  padding: 1rem;
+  text-align: center;
+}
+
+body {
+  font-family: 'Mukta', sans-serif;
+  display: grid;
+  grid-template-columns: 200px 1fr 200px;
+  grid-template-areas:
+    "header header header"
+    "nav nav nav"
+    "aux cont coment"
+    "footer footer footer";
+  background-color: #B0C4DE;
+  width: 1124px;
+  margin: 0 auto;
+}
+
+header {
+  grid-area: header;
+  padding-bottom: 5px;
+  padding-top: 3px;
+}
+
+header #logo{
+  float:left;
+  width: 208px;
+  height: 92px;
+}
+
+header #logo img {
+  width: 130px;
+  height: 90px;
+  margin-left: 10px;
+
+}
+
+header #nom_sitio {
+  display: inline-block;
+  width: 816px;
+  height: 92px;
+}
+
+header #nom_sitio h1 {
+  text-align: center;
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 50px;
+  margin: 0;
+  padding-top: 15px;
+}
+
+nav {
+  grid-area: nav;
+  background-color:#008B8B;
+  height: 55px;
+  margin-bottom: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  float: left;
+}
+
+nav ul li {
+  float: left;
+  font-size: 20px;
+  font-weight: bold;
+
+}
+
+nav ul li a{
+  padding: 6px;
+  margin-right: 10px;
+}
+
+nav ul li a:hover {
+  background-color: #B0C4DE;
+  color: black;
+  border-radius: 5px 5px 0px 0px;
+}
+
+#contenido{
+  grid-area: cont;
+
+}
+
+.elementos_aux {
+  grid-area: aux;
+  background-color:#008B8B;
+  padding: 1rem;
+  text-align: center;
+}
+
+
+
+
+main {
+  display: block;
+  background-color:#2F4F4F;
+  padding: 2rem;
+  color: white;
+
+
+}
+
+main #cont_evento img {
+  width: 250px;
+  height: 150px;
+  border: solid 3px white;
+  margin: 10px;
+  float:right;
+  clear: right;
+
+}
+main #multimedia ul {
+
+  list-style: none;
+  padding:0;
+
+
+}
+
+main #multimedia ul li {
+  display: inline;
+  padding-right: 30px;
+  margin-right: 20px;
+
+}
+
+a img {
+  width: 40px;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+.elementos_aux ul {
+  list-style: none;
+  text-align: center;
+  padding: inherit;
+}
+
+.elementos_aux ul li {
+  padding-bottom: 16px;
+}
+
+.elementos_aux ul li a:hover {
+  color: black;
+}
+
+footer {
+  grid-area: footer;
+  margin: 2rem;
+}
+
+#social{
+  text-align: center;
+}
+
+#social a{
+  margin-right:  3rem;
+}
+
+#copy{
+  float: right;
+}
+
+
+
+
+
+@media (min-width: 333px) and (max-width: 700px){
+
+  body {
+    width: auto;
+    grid-template-areas:
+      "header header"
+      "nav nav"
+      "aux aux"
+      "cont cont"
+      "footer footer";
+  }
+
+  header #nom_sitio {
+    width: inherit;
+    padding: inherit;
+    display: block;
+  }
+
+  header #logo{
+    display: none;
+  }
+
+  #contenido{
+    grid-area: cont;
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .elementos_aux {
+    margin-bottom: 1rem;
+    padding: 1rem;
+  }
+
+  .eventos:hover .icono_mas {
+    display: none;
+  }
+
+}
